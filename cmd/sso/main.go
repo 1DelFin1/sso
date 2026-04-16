@@ -16,7 +16,7 @@ func main() {
 	cfg := config.MustLoad()
 
 	log := setupLogger(cfg.Env)
-	log.Info("starting sso", slog.String("env", cfg.Env))
+	log.Info("starting app", slog.String("env", cfg.Env))
 
 	// TODO: инициализация приложения
 
