@@ -22,8 +22,6 @@ func main() {
 	application := app.New(log, cfg.GRPC.Port, cfg.StoragePath, cfg.TokenTTL)
 	application.GRPCSrv.MustRun()
 
-	// TODO: инициализация приложения
-
 	// TODO: запуск gRPC приложения
 }
 
