@@ -4,16 +4,17 @@ go 1.26
 
 require (
 	github.com/1DelFin1/protos v0.0.0-20260416074057-248ed1045240
+	github.com/golang-jwt/jwt/v5 v5.3.1
+	github.com/golang-migrate/migrate/v4 v4.19.1
 	github.com/ilyakaznacheev/cleanenv v1.5.0
 	github.com/joho/godotenv v1.5.1
+	golang.org/x/crypto v0.50.0
 	google.golang.org/grpc v1.80.0
 )
 
 require (
 	github.com/BurntSushi/toml v1.2.1 // indirect
-	github.com/golang-jwt/jwt/v5 v5.3.1 // indirect
-	github.com/golang-migrate/migrate/v4 v4.19.1 // indirect
-	golang.org/x/crypto v0.50.0 // indirect
+	github.com/mattn/go-sqlite3 v1.14.22 // indirect
 	golang.org/x/net v0.52.0 // indirect
 	golang.org/x/sys v0.43.0 // indirect
 	golang.org/x/text v0.36.0 // indirect
