@@ -37,6 +37,10 @@ func main() {
 		log.Error("application not shutdown")
 	}
 
+	if err := application.Storage.Stop(); err != nil {
+		log.Error("failed to close storage", slog.String("error", err.Error()))
+	}
+
 	log.Info("gracefully shutting down")
 }
 

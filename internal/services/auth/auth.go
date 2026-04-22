@@ -64,7 +64,7 @@ func New(
 func (a *Auth) Login(
 	ctx context.Context,
 	email string,
-	passHash string,
+	password string,
 	appID int,
 ) (string, error) {
 	const op = "auth.Login"
@@ -87,7 +87,7 @@ func (a *Auth) Login(
 		return "", fmt.Errorf("%s: %w", op, err)
 	}
 
-	if err := bcrypt.CompareHashAndPassword(user.PassHash, []byte(passHash)); err != nil {
+	if err := bcrypt.CompareHashAndPassword(user.PassHash, []byte(password)); err != nil {
 		a.log.Info("invalid password", sl.Err(err))
 		return "", fmt.Errorf("%s: %w", op, ErrInvalidCredentials)
 	}
